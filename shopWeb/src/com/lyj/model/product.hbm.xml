@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.lyj.model.Product" table="product">
+		<id name="pid" column="pid">
+			<generator class="native"/>
+		</id>
+		<property name="title" column="title" />
+		<property name="info" column="info"/>
+		<property name="price" column="price" />
+		<property name="detail" column="detail"/>
+		<property name="sold" column="sold" />
+		<property name="time" type = "timestamp">
+		    <column name="time"/>
+		</property>
+		<property name="imgUrl" column="imag"/>
+		<property name="cart" column="cart" />
+		
+	</class>
+</hibernate-mapping>

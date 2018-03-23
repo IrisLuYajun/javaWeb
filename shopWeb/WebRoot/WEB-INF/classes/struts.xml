@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="ssh" extends="struts-default" namespace="/">
+    
+	<action name="user_*" class="userAction" method="{1}">
+	<result name="success" type="redirect">/loginSuccess.jsp</result>
+	<result name="filure">/index.jsp</result>
+	</action>
+	
+	
+	<action name="product_*" class="productAction" method="{1}">
+	<result name="findAll" type="redirect">/listAll.jsp</result>
+	<result name="show" type="redirect">/show.jsp</result>
+	<result name="findAllForUser" type="redirect">/loginListAll.jsp</result>
+	<result name="findUnsoldForBuyer" type="redirect">/unSold.jsp</result>
+	<result name="account" type="redirect">/account.jsp</result>
+	<result name="buy" type="redirectAction">product_account.action</result>
+	<result name="edit" type="redirect">/edit.jsp</result>
+	<result name="update" type="redirect">/editSubmit.jsp</result>
+	<result name="publicSuccess" type="redirect">/publicSubmit.jsp</result>
+	<result name="deleteSuccess" type="redirect">/deleteSuccess.jsp</result>
+	<result name="putCart" type="redirectAction">product_findCart.action</result>
+	<result name="findCart" type="redirect">/cart.jsp</result>
+	<result name="buyCartSuccess" type="redirectAction">product_account.action</result>
+	<result name="buyCartFailure" type="redirect">/cart.jsp</result>
+	</action>
+</package>
+</struts>    
